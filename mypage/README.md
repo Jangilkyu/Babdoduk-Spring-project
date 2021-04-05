@@ -56,7 +56,7 @@
 
 <img src ="https://user-images.githubusercontent.com/69107255/113596858-dbecc780-9675-11eb-9749-1f2a88592610.png">
 
-## 4. 주소 변경이 성공적으로 완료되었다는 경고창을 띄운 후
+## 4. 주소 변경이 성공적으로 완료되었다는 경고창을 띄운 후,
 
 <img src ="https://user-images.githubusercontent.com/69107255/113597014-0c346600-9676-11eb-97b7-e38cb258ed20.png">
 
@@ -65,6 +65,27 @@
 <img src ="https://user-images.githubusercontent.com/69107255/113597165-443ba900-9676-11eb-9fd0-50b7cb0ef3ab.png">
 
 
-# 1:1 문의
+# **1:1 문의**
+
+- 내가 작성한 1:1 문의 게시글을 확인 할 수있다.
+- [제목]부분을 검색 할 수 있다. 
 
 <img src ="https://user-images.githubusercontent.com/69107255/113597277-6df4d000-9676-11eb-8596-0666262adb89.png">
+
+## 문의 내용을 클릭 시 세부 내용이다. 미답변 시 [문의 답변]란에 관리자가 확인 중에 있습니다. 라는 멘트가 나온다.
+
+<img src ="https://user-images.githubusercontent.com/69107255/113599055-08561300-9679-11eb-8d1d-5dd17171ef8f.png">
+
+## 비밀번호 변경
+
+<img src ="https://user-images.githubusercontent.com/69107255/113599533-b5c92680-9679-11eb-913b-1aa8f774853e.png">
+
+# **회원 탈퇴**
+
+- 체크박스를 클릭 후 회원 탈퇴 진행 할 수 있다.
+
+<img src ="https://user-images.githubusercontent.com/69107255/113599677-e4df9800-9679-11eb-9834-7a0ee63c50ab.png">
+
+- 체크박스 선택안하고 탈퇴를 진행 할 시 toastr 경고창을 보여준다.
+
+<img src ="https://user-images.githubusercontent.com/69107255/113599730-fb85ef00-9679-11eb-9104-84ddecb278a7.png">
