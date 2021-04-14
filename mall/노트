@@ -1,0 +1,17 @@
+메인
+http://localhost:8080/
+
+관리자페이지
+http://localhost:8080/admin
+
+로그인
+http://localhost:8080/login.do
+
+회원가입
+http://localhost:8080/signUp.do
+
+상품목록
+http://localhost:8080/detailProducts.do
+
+상품상세
+http://localhost:8080/listProducts.do?no=58

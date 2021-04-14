@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="notice">
+
+	<select id="findAll" resultType="com.mall.vo.notice.NoticeVo">
+		select notice_no,notice_title,notice_content,notice_regdate,notice_hit,notice_manager  
+  	  	from (select rownum num,notice_no,notice_title,notice_content,notice_regdate,notice_hit,notice_manager
+    	from (select * from tb_notice 
+    	<if test="searchKeyword != null and searchKeyword != ''">
+  			<choose>
+		   	 	<when test="searchType == 'all'">
+   					where Notice_TITLE like '%' || #{searchKeyword} || '%' or Notice_CONTENT like '%' || #{searchKeyword} || '%' 
+			    </when>
+			    <otherwise>
+   					where ${searchType} like '%' || #{searchKeyword} || '%'
+			    </otherwise>
+		  	</choose>
+ 		</if>
+ 		 order by notice_no desc)) 
+		where num between #{start} and #{end}
+	</select>
+	
+	<select id="detail" resultType="com.mall.vo.notice.NoticeVo">
+  		select * from tb_notice where notice_no=#{notice_no}
+ 	</select> 
+
+  	<insert id="insert">
+  		insert into tb_notice values(seq_tb_notice.nextval,#{notice_title},#{notice_content},sysdate,0,#{notice_manager})
+ 	</insert>
+ 	
+ 	<update id="update">
+  		update tb_notice set notice_title=#{notice_title},notice_content=#{notice_content} where notice_no=#{notice_no}
+ 	</update>
+ 	
+ 	<delete id="delete">
+  		delete from tb_notice where notice_no=#{notice_no}  
+  	</delete>
+
+	<!-- 페이징을 위한 총 글 수 -->
+ 	<select id="totBoard" resultType="java.lang.Integer">
+  		select count(*) from tb_notice
+  		<if test="searchKeyword != null and searchKeyword != ''">
+  			<choose>
+		   	 	<when test="searchType == 'all'">
+   					where NOTICE_TITLE like '%' || #{searchKeyword} || '%' or NOTICE_CONTENT like '%' || #{searchKeyword} || '%' 
+			    </when>
+			    <otherwise>
+   					where ${searchType} like '%' || #{searchKeyword} || '%'
+			    </otherwise>
+		  	</choose>
+ 		</if>
+  	</select>
+  	
+  	<!-- 조회수 증가 -->
+  	<update id="updateHit">
+  		update tb_notice set notice_hit=notice_hit+1 where notice_no=#{notice_no}
+ 	</update>
+
+
+</mapper>

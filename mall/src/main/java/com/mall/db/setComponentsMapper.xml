@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mall.dao.set.SetPackageDao">
+	<resultMap type="com.mall.vo.set.SetVo" id="setMap">
+		<id property="set_no" column="set_no"/>
+		<id property="set_title" column="set_title"/>
+		<id property="set_subtitle" column="set_subtitle"/>
+		<id property="set_img" column="set_img"/>
+		<id property="set_stock" column="set_stock"/>
+		<id property="set_price" column="set_price"/>
+		<id property="set_regdate" column="set_regdate"/>
+		<id property="set_detail_text" column="set_detail_text"/>
+	</resultMap>
+	
+	<resultMap type="com.mall.vo.set.SetComponentVo" id="setComponentMap">
+		<id property="set_no" column="set_no"/>
+		<id property="product_no" column="product_no"/>
+	</resultMap>
+	
+	<resultMap type="com.mall.vo.product.ProductVo" id="productMap">
+		<id property="product_no" column="product_no" />
+		<id property="product_category" column="product_category" />
+		<id property="product_stock" column="product_stock" />
+		<id property="product_title" column="product_title" />
+		<id property="product_subtitle" column="product_subtitle" />
+		<id property="product_main_img" column="product_main_img" />
+		<id property="product_caloies" column="product_caloies" />
+		<id property="product_origin" column="product_origin" />
+		<id property="product_storage" column="product_storage" />
+		<id property="product_detail_img1" column="product_detail_img1" />
+		<id property="product_detail_img2" column="product_detail_img2" />
+		<id property="product_detail_text" column="product_detail_text" />
+		<id property="product_ingredient" column="product_ingredient" />
+		<id property="product_price" column="product_price" />
+		<id property="product_regdate" column="product_regdate" />
+	</resultMap>
+	
+	<resultMap type="com.mall.vo.set.SetProductVo" id="setProductMap">
+		<collection property="component" resultMap="setComponentMap" />
+		<collection property="product" resultMap="productMap" />
+	</resultMap>
+	
+	<select id="findAllComponents" resultMap="setProductMap">
+		select * from TB_SET_COMPONENT a, TB_PRODUCT b
+		where a.product_no = b.product_no
+		order by a.set_no
+	</select>
+	
+
+</mapper>

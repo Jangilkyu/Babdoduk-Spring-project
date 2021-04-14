@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cart">
+	
+	<!-- 장바구니에 상품 담기  -->
+	<insert id="insert">
+		insert into TB_CART(cart_no, mem_id, product_no, product_qty, product_price, product_total, product_title) 
+		values (seq_cart.NEXTVAL, #{mem_id, jdbcType=VARCHAR}, #{product_no}, #{product_qty}, #{product_price}, #{product_price} * #{product_qty}, #{product_title})
+	</insert>
+	
+	<!-- 장바구니 목록보기 -->
+	<select id="listCart" resultType="cartVo">
+  		select c.cart_no cart_no,  c.mem_id mem_id, p.product_no product_no, m.mem_name mem_name, p.product_title product_title, p.product_main_img product_main_img,
+  			c.product_qty product_qty, p.product_price product_price, (p.product_price * c.product_qty) product_total
+  		from TB_CART c, TB_PRODUCT p , TB_MEMBER m
+  		where p.product_no = c.product_no 
+  			and m.mem_id = c.mem_id
+  			and c.mem_id = #{mem_id, jdbcType=VARCHAR}
+  		order by c.cart_no 
+  	</select>
+
+	<!-- 장바구니 금액 합계 -->
+	<select id="sumPrice" resultType="int">
+		select nvl(sum(p.product_price * c.product_qty), 0) product_total
+		from TB_CART c, TB_PRODUCT p
+		where c.product_no = p.product_no 
+			and c.mem_id = #{mem_id, jdbcType=VARCHAR}
+	</select>
+	
+	<!-- 장바구니 수정 -->
+	<update id="modify">
+		update TB_CART set product_qty = #{product_qty} 
+		where product_no = #{product_no}
+			and mem_id = #{mem_id, jdbcType=VARCHAR}
+	</update>
+
+	<!-- 장바구니에 담긴 상품 삭제 -->
+	<delete id="delete">
+		delete from TB_CART
+		where cart_no = #{cart_no}
+	</delete>
+	
+	<!-- 장바구니 선택상품 삭제-->
+	<delete id="selectDelete">
+		delete from TB_CART
+		where cart_no = #{cart_no}
+			and mem_id = #{mem_id, jdbcType=VARCHAR} 
+	</delete>
+	
+	<!-- 장바구니 동일 상품 레코드 검사 -->
+	<select id="count" resultType="int">
+		select count(*)
+		from TB_CART
+		where product_no = #{product_no}
+			and mem_id = #{mem_id, jdbcType=VARCHAR}
+	</select>
+	
+	<!-- 장바구니 수량 변경 -->
+	<update id="update">
+		update TB_CART
+		set product_qty = product_qty + #{product_qty}
+		where product_no = #{product_no}
+			and mem_id = #{mem_id, jdbcType=VARCHAR}
+	</update>
+	
+	
+	
+</mapper>

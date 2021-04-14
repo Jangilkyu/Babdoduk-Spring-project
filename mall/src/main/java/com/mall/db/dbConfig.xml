@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+  <properties resource="com/mall/db/db.properties"/>
+  <typeAliases>
+  	<typeAlias type="com.mall.vo.product.ProductVo" alias="productVo"/>
+  	<typeAlias type="com.mall.vo.cart.CartVo" alias="cartVo"/>
+  	<typeAlias type="com.mall.vo.sale.SaleVo" alias="saleVo"/>
+  	<typeAlias type="com.mall.vo.set.SetVo" alias="setVo"/>
+  	<typeAlias type="com.mall.vo.event.EventVo" alias="eventVo"/>
+  </typeAliases>
+  
+  
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${user}"/>
+        <property name="password" value="${pwd}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  <mappers>
+   	<mapper resource="com/mall/db/productMapper.xml"/>
+    <mapper resource="com/mall/db/userMapper.xml"/>
+    <mapper resource="com/mall/db/mypageMapper.xml"/>
+    <mapper resource="com/mall/db/reviewMapper.xml"/>
+    <mapper resource="com/mall/db/cartMapper.xml"/>
+    <mapper resource="com/mall/db/faqMapper.xml"/>
+    <mapper resource="com/mall/db/noticeMapper.xml"/>
+    <mapper resource="com/mall/db/inquiryMapper.xml"/>
+    <mapper resource="com/mall/db/saleMapper.xml"/>
+    <mapper resource="com/mall/db/saleProductMapper.xml"/>
+    <mapper resource="com/mall/db/orderMapper.xml"/>
+    <mapper resource="com/mall/db/setMapper.xml"/>
+    <mapper resource="com/mall/db/setComponentsMapper.xml"/>
+    <mapper resource="com/mall/db/eventMapper.xml"/>
+  </mappers>
+</configuration>

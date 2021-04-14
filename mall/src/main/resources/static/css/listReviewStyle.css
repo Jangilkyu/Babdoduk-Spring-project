@@ -1,0 +1,23 @@
+
+.review-body-wrapper {
+	position: relative;
+	margin: auto;
+	margin-top: 90px;
+	margin-bottom: 50px;
+	width: 1100px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.list-title{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.search-container {
+	width:100%;
+	text-align: right;
+}
+
+.table-container {
+	width:100%;
+}

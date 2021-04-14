@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+#emailForm, #phoneForm{
+	visibility: hidden;
+}
+
+.email-container{
+    background: none;
+    width: 900px;
+    padding: 30px;
+    border: 1px solid #DFE1E5;
+    border-radius: 5px;	
+}
+
+.phone-container{
+    background: none;
+    width: 900px;
+    padding: 30px;
+    border: 1px solid #DFE1E5;
+    border-radius: 5px;
+}
+
+.change-title {
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+.update-div {
+    background: none;
+    width: 500px;
+    padding: 30px;
+    border: 1px solid #DFE1E5;
+    border-radius: 5px; 
+    margin-left: auto;  	
+}
+
+.btn-chck{
+	display : inline-block;
+	margin-left: 200px;
+}
+
+.btn-cetifi {
+	margin-top: 15px;
+}
+
+.user-info {
+    background: none;
+    width: 900px;
+    padding: 5px;
+    border: 1px solid #DFE1E5;
+    border-radius: 5px;	
+}

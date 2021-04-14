@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall.dao.sale.SaleProductDao">
+	<resultMap type="com.mall.vo.sale.SaleVo" id="saleMap">
+		<id property="product_no" column="product_no"/>
+		<id property="timesale_start" column="timesale_start"/>
+		<id property="timesale_end" column="timesale_end"/>
+		<id property="timesale_saleprice" column="timesale_saleprice"/>
+	</resultMap>
+	
+	<resultMap type="com.mall.vo.product.ProductVo" id="productMap">
+		<id property="product_no" column="product_no" />
+		<id property="product_category" column="product_category" />
+		<id property="product_stock" column="product_stock" />
+		<id property="product_title" column="product_title" />
+		<id property="product_subtitle" column="product_subtitle" />
+		<id property="product_main_img" column="product_main_img" />
+		<id property="product_caloies" column="product_caloies" />
+		<id property="product_origin" column="product_origin" />
+		<id property="product_storage" column="product_storage" />
+		<id property="product_detail_img1" column="product_detail_img1" />
+		<id property="product_detail_img2" column="product_detail_img2" />
+		<id property="product_detail_text" column="product_detail_text" />
+		<id property="product_ingredient" column="product_ingredient" />
+		<id property="product_price" column="product_price" />
+		<id property="product_regdate" column="product_regdate" />
+	</resultMap>
+	
+	<resultMap type="com.mall.vo.sale.SaleProductVo" id="saleProductMap">
+		<collection property="sale" resultMap="saleMap" />
+		<collection property="product" resultMap="productMap" />
+	</resultMap>
+
+	<select id="selectValid" resultMap="saleProductMap">
+		select	* from TB_TIMESALE a, TB_PRODUCT b
+		where	a.product_no = b.product_no
+		and		to_date(#{now}, 'yyyy-mm-dd hh24:mi:ss') > a.timesale_start 
+		and		a.timesale_end > to_date(#{now}, 'yyyy-mm-dd hh24:mi:ss') 
+		order by a.timesale_end	
+	</select>
+	
+	<select id="findAll" resultMap="saleProductMap">
+		select	* from TB_TIMESALE a, TB_PRODUCT b
+		where	a.product_no = b.product_no
+		order by a.timesale_start	
+	</select>
+
+</mapper>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="order">
+  <select id="findCartList" resultType="com.mall.vo.Order.OrderProdListVo">
+	SELECT p.product_no, p.product_title,product_subtitle,product_main_img,c.product_price,c.product_total,c.product_qty
+    FROM tb_product p, tb_cart c
+    WHERE p.product_no = c.product_no
+    AND c.mem_id = #{mem_id}
+  </select>
+  
+  <!-- 장바구니 금액 합계 -->
+  <select id="sumPrice" resultType="java.lang.Integer">
+		select nvl(sum(p.product_price * c.product_qty), 0) product_total
+		from TB_CART c, TB_PRODUCT p
+		where c.product_no = p.product_no 
+		and c.mem_id = #{mem_id}
+  </select>
+  
+  <!-- 배송지 정보 -->
+  <select id="selectMemShip" resultType="com.mall.vo.Order.OrderShippingVo">
+  		SELECT * FROM tb_member WHERE mem_id = #{mem_id}
+  </select>
+  
+  <!-- 총 구매 상품 갯수  -->
+  <select id="selectQty" resultType="java.lang.Integer">
+  	SELECT sum(product_qty) FROM tb_cart WHERE mem_id = #{mem_id}
+  </select>
+  
+  <!-- 상품 갯수  -->
+  <select id="selelctProdQty" resultType="java.lang.Integer">
+	  SELECT COUNT(product_no) FROM tb_cart WHERE mem_id = #{mem_id}
+  </select>
+  
+  <insert id="insertOrderInfo">
+  	 INSERT INTO tb_order (order_no,order_date,order_name,order_phone,order_addr,order_zipcode,order_detailaddr,order_totprice,order_mem_id)
+  	 VALUES(
+  	 seq_tb_order.nextval,
+  	 sysdate,
+  	 #{order_name},
+  	 #{order_phone},
+  	 #{order_addr},
+  	 #{order_zipcode},
+  	 #{order_detailAddr},
+  	 #{order_totprice},
+  	 #{order_mem_id}
+	)
+  </insert>
+
+
+</mapper>

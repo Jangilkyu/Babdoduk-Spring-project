@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+#none_list{
+	text-align: center;
+}
+
+th {
+	text-align : center;
+	font-size: 1.5rem;
+}
+
+td {
+	text-align: center;
+}
+
+#cs_title {
+	font-weight: bold;
+}
+
+#page {
+	text-align: center;
+}
+
+
+#select-container {
+ width: 100px;
+}
+
+.iq-List-wrap {
+    display: flex;
+}
+
+
+#btn-container {
+    margin-top: 16px;
+}

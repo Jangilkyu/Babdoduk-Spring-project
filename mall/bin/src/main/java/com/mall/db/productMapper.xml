@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="products">
+  <select id="register">
+    insert into TB_PRODUCT values(#{product_no}, #{product_category}, #{product_stock}, 
+    #{product_title}, #{product_subtitle}, #{product_main_img}, #{product_caloies}, 
+    #{product_origin}, #{product_storage}, #{product_detail_img1}, #{product_detail_img2}, 
+    #{product_detail_text}, #{product_ingredient}, #{product_price}, sysdate)
+  </select>
+  
+  <select id="selectProducts" resultType="productVo">
+ 	select product_no, product_category, product_title, product_price, 
+    		product_main_img, product_detail_img1, product_detail_img2
+	from tb_product where product_no = #{no}
+  </select>
+  
+  <select id="findAll" resultType="productVo">
+  	select * from TB_PRODUCT
+  </select>
+</mapper>

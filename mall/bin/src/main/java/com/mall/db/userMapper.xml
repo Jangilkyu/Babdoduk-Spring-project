@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="userMapper">
+
+	<select id="idCheck" resultType="java.lang.Integer">
+		select count(mem_id) from TB_MEMBER where mem_id = #{mem_id}
+	</select>
+
+	<select id="emailCheck" resultType="java.lang.Integer">
+		select count(mem_email) from TB_MEMBER where mem_email = #{mem_email}
+	</select>
+
+	<insert id="memberSave">
+		insert into TB_MEMBER values
+		(SEQ_MEMBER.NEXTVAL,#{mem_id},#{mem_pwd},#{mem_name},#{mem_birth},#{mem_email},#{mem_phone},#{mem_zipCode},#{mem_address},#{mem_detailAddress})
+	</insert>
+	<select id="findpwd" resultType="java.lang.String">
+		select mem_pwd from TB_MEMBER where mem_id = #{mem_id} and mem_pwd = #{mem_pwd}
+	</select>
+</mapper>

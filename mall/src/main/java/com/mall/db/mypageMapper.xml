@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mypage">
+  <select id="totBoard" resultType="java.lang.Integer">
+  	select COUNT(*) FROM tb_cs WHERE cs_mem_id = #{cs_mem_id}
+  </select>
+
+  <select id="getUserinfo" resultType="com.mall.vo.mypage.MypageVo">
+		select * from tb_member where mem_id = #{mem_id}
+  </select>
+  
+  <select id="getMemberId" resultType="com.mall.vo.mypage.MypageVo">
+  		select mem_id from tb_member where mem_id = #{mem_id}
+  </select>
+  
+  <select id="getPwd" resultType="java.lang.Integer">
+		SELECT COUNT(mem_pwd) FROM tb_member WHERE mem_id = #{mem_id} AND mem_pwd = #{mem_pwd}
+  </select>
+  
+  <select id="getShipping" resultType="com.mall.vo.mypage.ShippingVo">
+  		SELECT mem_zipcode,mem_address,mem_detailaddress FROM tb_member WHERE mem_id = #{mem_id}
+  </select>
+  
+  <update id="updateShipping">
+  		UPDATE tb_member 
+  		SET
+  		mem_zipcode = #{mem_zipcode},
+  		mem_address = #{mem_address},
+  		mem_detailaddress = #{mem_detailaddress}
+  		WHERE
+  		mem_id = #{mem_id}
+  </update>
+
+  <update id="updateEmail">
+  		UPDATE tb_member SET mem_email = #{mem_email} WHERE mem_id = #{mem_id}
+  </update>
+  
+  <update id="updatePhone">
+  		UPDATE tb_member SET mem_phone = #{mem_phone} WHERE mem_id = #{mem_id}
+  </update>
+  
+  <update id="updatePwd">
+  		UPDATE tb_member SET mem_pwd = #{mem_pwd} WHERE mem_id = #{mem_id}
+  </update>
+  
+  <delete id="deleteId">
+  		DELETE tb_member WHERE mem_id = #{mem_id}
+  </delete>  
+  
+  <select id="phoneAuth" resultType="java.lang.Integer">
+  	SELECT COUNT(mem_phone) FROM tb_member WHERE  mem_phone = #{mem_phone} AND mem_name = #{mem_name}
+  </select>
+  
+  <select id="phoneAuthGetId" resultType="java.lang.String">
+	SELECT mem_id FROM tb_member WHERE  mem_phone = #{mem_phone} AND mem_name = #{mem_name}
+  </select>
+  
+  <select id="emailAuth" resultType="java.lang.Integer">
+  	SELECT COUNT(mem_email) FROM tb_member WHERE  mem_email = #{mem_email} AND mem_name = #{mem_name}
+  </select>  
+  
+  <select id="emailAuthGetId" resultType="java.lang.String">
+	SELECT mem_id FROM tb_member WHERE  mem_email = #{mem_email} AND mem_name = #{mem_name}
+  </select>
+  
+  <select id="findPwdUserId" resultType="com.mall.vo.mypage.PwdInquiryVo">
+  	SELECT mem_id, mem_phone FROM tb_member WHERE mem_id = #{mem_id}
+  </select>
+  
+  <select id="pwdPhoneAuth" resultType="java.lang.Integer">
+	SELECT COUNT(mem_id) FROM tb_member where mem_name = #{mem_name} AND mem_phone = #{mem_phone}
+  </select>
+  
+  <update id="updateInqPwd">
+  	UPDATE tb_member 
+  	SET mem_pwd = #{mem_pwd}
+  	WHERE mem_id = #{mem_id}
+  </update>
+  
+  <select id="getMaskInfo" resultType="com.mall.vo.mypage.MaskingVo">
+  	SELECT mem_email, mem_phone FROM tb_member WHERE mem_id = #{mem_id}
+  </select>
+    
+  <select id="findOrderList" resultType="com.mall.vo.Order.OrderListVo">
+  	SELECT * FROM tb_order WHERE order_mem_id = #{order_mem_id}
+  </select>
+  
+</mapper>

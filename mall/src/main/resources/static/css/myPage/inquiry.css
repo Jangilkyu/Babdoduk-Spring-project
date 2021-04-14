@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#cs_content {
+    resize: none;
+}
+
+#answer_wrap {
+	display: none;
+}
+
+form {
+	width: 1000px;
+}

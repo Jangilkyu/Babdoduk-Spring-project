@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reviewMapper">
+
+	<insert id="save">
+		insert into tb_review values (SEQ_REVIEW.NEXTVAL,#{mem_id},#{product_no},#{review_title},#{review_content},SYSDATE,SYSDATE,0,#{product_title},#{review_fname})
+	</insert>
+	
+	<select id="findTotalRecord" resultType="java.lang.Integer">
+		select count(*) from tb_review 
+		<if test="keyword != ''">
+			where product_title like '%' || #{keyword} || '%'
+		</if>
+	</select>
+	
+	<select id="findAllPaging" resultType="com.mall.vo.review.ReviewVO">
+		 <![CDATA[
+		select review_no,mem_id,product_no,review_title,review_content,review_regdate,review_update,review_hit,product_title,review_fname,seq 
+		from (select review_no,mem_id,product_no,review_title,review_content,review_regdate,review_update,review_hit,product_title,review_fname,ROW_NUMBER()OVER(ORDER BY REVIEW_NO DESC) seq 
+				from tb_review
+				where review_no > 0)
+		where seq > #{start} and seq < #{end} 
+		]]>
+		
+		<if test="keyword != ''">
+			and product_title like '%' || #{keyword} || '%'
+		</if>
+		
+	</select>
+	
+	<select id="findByNo" resultType="com.mall.vo.review.ReviewVO">
+		select * from tb_review where review_no = #{review_no}
+	</select>
+	
+	<update id="update">
+		update tb_review set review_title = #{review_title}, review_content = #{review_content}, review_fname = #{review_fname} where review_no = #{review_no}
+	</update>
+	
+	<update id="updateHit">
+		update tb_review set review_hit = (select review_hit from tb_review where review_no = #{review_no}) +1 where review_no = #{review_no}
+	</update>
+	
+	<delete id="deleteByNo">
+		delete from tb_review where review_no = #{review_no}
+	</delete>
+	
+	<select id="findProduct" resultType="com.mall.vo.review.ReviewVO">
+		select * from tb_review where product_no = #{no} 
+	</select>
+
+</mapper>

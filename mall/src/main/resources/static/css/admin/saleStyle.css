@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+body {
+	background-color: #F7F5F3;
+}
+
+.admin-body-wrapper {
+	margin-left: 250px;
+}
+
+.register-wrap {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.register-title {
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.register-wrap .container {
+	width: 830px;
+	height: 430px;
+	margin: auto;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px 3px #E7E0DA;	
+}
+
+.register-form {
+	width: 730px;
+	margin: auto;
+	padding-top: 30px;
+}
+
+.button {
+	width: 140px;
+	height: 40px;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	margin-left: 30px;
+}
+
+#button-search {
+	width: 100%;
+	background-color: #CFDCD7;
+	color: black;
+}
+
+#button-search:hover {
+	background-color: #B7D9D4;
+	cursor: pointer;
+}
+
+.form-row {
+	width: 100%;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.inputtag{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+
+.inputbox{
+	margin-right: 45px;
+}
+
+#productTitle{
+	margin-right: 0px;
+}
+
+#productPrice{
+	margin-right: 0px;	
+}
+
+#startDate{
+	margin-right: 5px;
+}
+
+#endDate{
+	margin-right: 5px;
+}
+
+.register-form .form-control:focus {
+ 	border-color: #B7D9D4;
+ 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #B7D9D4;
+}
+
+
+.button-group {
+	width: 100%;
+	height: 60px;
+	margin-top: 40px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.button {
+	width: 140px;
+	height: 40px;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	margin-left: 30px;
+}
+
+#sale-register-submit {
+	background-color: #19778A;
+	color: white;
+}
+
+#sale-register-submit:hover{
+	background-color: #2CC4C9;
+	cursor: pointer;
+}
+
+

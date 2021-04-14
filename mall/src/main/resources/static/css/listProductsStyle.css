@@ -1,0 +1,209 @@
+
+#list {
+	position: relative;
+	margin: auto;
+	padding-top: 90px;
+	margin-bottom: 50px;
+	width: 1120px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.list-title{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.search-info {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.search-info .keyword {
+	font-size: 24px;
+	color: #26a69a;
+}
+
+.search-info .count {
+	font-size: 24px;
+	color: #ffa62b;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 4px;
+}
+
+.not-found {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.not-found .fa-exclamation-circle {
+	font-size: 80px;
+	color: #ede7e3;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.list-wrap {
+	margin-top: 50px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.list-item-box {
+	width: 260px;
+	height: 380px;
+	margin-top: 40px;
+	margin-bottom: 50px;
+	margin-right: 20px;
+}
+
+.items {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	display: block;
+}
+
+.items .list-item-image{
+	width: 260px;
+	height: 290px;
+	object-fit: cover;
+	border-radius: 5%;
+}
+
+.items .list-product-title{
+	font-weight: 400;
+	font-size: 18px;
+	margin-top: 10px;
+	color: black;
+}
+
+.items .list-product-subtitle{
+	font-weight: 400;
+	margin-top: 5px;
+	color: #19778a;
+}
+
+.items .sale-origin-price {
+	font-weight: 500;
+	margin-top: 5px;
+	font-size: 12px;
+	color: gray;
+	text-decoration: line-through;
+}
+
+.items .sale-price {
+	font-weight: 700;
+	font-size: 18px;
+	color: #ffa62b;
+}
+
+.items .sale-rate {
+	font-weight: 700;
+	font-size: 16px;
+	color: #26A69A;
+	padding-bottom: 2px;
+}
+
+.items .list-price {
+	font-weight: 700;
+	margin-top: 5px;
+	color: black;
+}
+
+.items a {
+	text-decoration: none;
+	color: black;
+}
+
+
+.items .list-product-title a:hover {
+	color: #19778a;
+}
+
+.page-num {
+	text-align: center;	
+}
+
+.page-num a {
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.page-num a:link {
+	color: #19778a;
+
+}
+		
+.page-num a:visited {
+	color: #19778a;
+}
+		
+.page-num a:hover {
+	color: #ffa62b;
+}
+
+
+.footer {
+	position: relative;
+	padding-top: 50px;
+}
+
+.footer-link{
+	background: #c0c0c0; 
+	padding: 5px 50px;
+	color: #000000;
+}
+
+.footer-link ul{
+	text-align: center;
+	padding-top: 15px;
+	padding-left: 0;
+	list-style: none;
+}
+
+.footer-link li{
+	display: inline-block;
+	padding:0 28px;	
+	line-height: 25px;
+}
+
+.footer-link a{
+	text-decoration: none;
+	color: #000000;
+}
+
+.footer-outer{
+	text-align: center;
+}
+
+.footer-col{
+	text-align: left;
+	display: inline-block;
+	padding: 50px;	
+}
+
+.footer-title{
+	font-size: 20px;
+}
+
+.footer--call{
+	font-size: 27px;
+}
+
+.footer-bottom{
+	background: #5c5c5c;
+	padding: 5px 0;
+}
+
+.footer--copy{
+	padding-top: 15px;
+	text-align: center;
+	color: #c2c2c2;
+	font-size: 16px;
+}

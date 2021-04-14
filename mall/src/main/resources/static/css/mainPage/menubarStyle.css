@@ -1,0 +1,148 @@
+
+.divide-line {
+	width: 100%;
+	background-color: white;
+	box-shadow: 0px 8px 8px -8px #ede7e3;
+	z-index: 10;
+}
+
+.body-wrapper{
+	width: 1100px;
+	margin: auto;
+}
+
+#menubar {
+	display: flex;
+	justify-content: space-between;
+	height: 45px;
+}
+
+.menubar .category-list{
+	margin-top: 3px;
+}
+
+.menubar a {
+    text-decoration: none !important;
+}
+
+.menubar a:link {
+    color: black;
+    text-decoration: none !important;
+}
+
+.menubar a:visited{
+    color: black;
+    text-decoration: none !important;
+}
+
+.menubar .category-list a:hover {
+    color: #80cbc4;  
+}
+
+.sub_ul {
+    width: 100px; 
+    border: 1px solid black;
+    display: none;
+}
+
+
+.category-list ul li{
+    display: inline-block;
+    margin-right: 42px;
+    font-size: 16px;
+    font-weight: bold;
+	line-height: 36px;
+}
+
+.dropbtn {
+  background-color: white;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  margin-top: 3px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #19778A;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #19778A;
+}
+
+
+.dropdown-content a:hover {background-color: #D2E0DC;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #80cbc4;}
+
+
+.ipnut-style {
+    width: 15px;
+    height: 35px;
+    font-size: 20px;
+}
+
+form {
+    display: inline-block;
+}
+
+.inp_search {
+    width: 235px;
+    height: 40px;
+    padding: 0 60px 0 14px;
+    border-radius: 20px;
+    background-color: #f7f7f0;
+    font-weight: 350;
+    color: #666;
+    border-color: #26A69A;
+    outline: none;
+}
+
+.search-wrap {
+    display: inline-block;
+    margin-top: 3px;
+    width: 290px;
+    height: 42px;
+}
+
+.fa-search {
+	font-size: 24px;
+}
+
+.fa-search:hover {
+	color: #26A69A;
+}
+
+.cart-wrap {
+    margin-top: 3px;
+    display: inline-block;
+}
+
+.btn-cart {
+    margin-left: 30px;
+}
+
+.btn-cart :hover{
+    color: #19778A;
+}
+

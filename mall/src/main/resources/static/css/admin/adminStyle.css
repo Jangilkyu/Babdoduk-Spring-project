@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+body {
+	background-color: #F7F5F3;
+}
+/* 사이드 메뉴바 */
+#side-menu {
+	width:230px;
+	height:100%;
+	position:fixed;
+	z-index: 10;
+	background-color: #26a69a;
+}
+
+.admin-body-wrapper {
+	margin-left: 250px;
+}
+
+.side-menu .goto-admin-main{
+	margin-top: 25px;
+	margin-bottom: 5px;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	font-size: 24px;
+	text-align:center;
+}
+
+.side-menu .goto-admin-main .category-title{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 16px;
+	color: white;
+	padding-left: 10px;
+}
+
+
+.side-menu .panel-group {
+	width: 100%;
+}
+
+.side-menu .menu-list-sub {
+	height: 50px;
+	margin-left: 25px;
+}
+
+.side-menu .menu-list-sub .menu-list-sub-category{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	color: rgba(255,255,255,.7);
+}
+
+.side-menu .menu-list-sub .point{
+	color: white;
+}
+
+.side-menu .menu-list-title{
+	margin-left: 12px;
+}
+
+
+.side-menu .menu-list-sub :hover{
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+
+.side-menu .collapse-inner {
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	width: 200px;
+	background-color: white;
+}
+
+.item-wrapper {
+	width: 100%;
+	height: 45px;
+	margin-left: 15px;
+	font-size: 14px;
+}
+
+.item-wrapper :hover{
+	text-decoration: none;
+	color: #ffa62b;
+	font-weight: bold;
+}
+
+.item-wrapper .active{
+	color: #ffa62b;
+	font-weight: bold;
+}
+
+
+.collapse-item {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	color: black;
+}
+
+.side-menu .divider {
+	background-color: rgba(255,255,255,.5);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.toolbar {
+	position: relative;
+	padding-left: 230px;
+	height: 60px; 
+	background-color: rgba(255,255,255,.5);
+	box-shadow: 0px 8px 8px -8px #DFD4CD;
+	display: flex;
+	align-items: center;
+}
+
+.message {
+	width: 70%;
+}
+
+.logout {
+	width: 30%;
+	text-align: right;
+	margin-right: 30px;
+	color: #26a69a;
+}
+
+.logout .fa-sign-out-alt {
+	font-size: 26px;
+}
+
+.main-hello {
+	margin-top: 300px;
+	text-align: center;
+}
+
+.main-hello .fa-cogs{
+	font-size: 200px;
+	color: white;
+	text-shadow: 0px 8px 8px #DFD4CD;
+	margin-bottom: 20px;
+}

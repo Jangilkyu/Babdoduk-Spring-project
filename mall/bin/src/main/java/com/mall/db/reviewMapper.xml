@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reviewMapper">
+
+	<insert id="save">
+		insert into tb_review values (SEQ_REVIEW.NEXTVAL,#{mem_id},#{product_no},#{review_title},#{review_content},SYSDATE,SYSDATE,0,#{product_title},#{review_fname})
+	</insert>
+
+</mapper>

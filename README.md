@@ -50,6 +50,10 @@
 
 ![이메일 변경](https://user-images.githubusercontent.com/69107255/114673236-ef1c2900-9d40-11eb-933b-44269ecb4da4.gif)
 
+### 회원 탈퇴
+
+![회원탈퇴](https://user-images.githubusercontent.com/69107255/114734223-feba6280-9d7e-11eb-81d4-48fbb642fa6f.gif)
+
 ### 결제 구현
 
 ![PAYMENT1](https://user-images.githubusercontent.com/69107255/114698188-c0f71300-9d59-11eb-9a2e-cb271f055f17.gif)
@@ -72,9 +76,21 @@
 
 ![admininquiry](https://user-images.githubusercontent.com/69107255/114721385-d6793680-9d73-11eb-88bc-312618e8c713.gif)
 
+### 답변 완료
+
+![inquiryclear](https://user-images.githubusercontent.com/69107255/114734452-2dd0d400-9d7f-11eb-877e-8b70250dc25b.gif)
+
 ### Interceptor
 
 ![Interceptor1](https://user-images.githubusercontent.com/69107255/114666483-4918f080-9d39-11eb-9a71-7200d4cb4a12.gif)
+
+
+### 형상관리
+
+![소스트리](https://user-images.githubusercontent.com/69107255/114664028-1c170e80-9d36-11eb-99e4-ad09ca2a7cfb.gif)
+
+<img src ="https://user-images.githubusercontent.com/69107255/113604293-0774af80-9680-11eb-996e-8c825294d125.png">
+
 
 ## **🍕 프로젝트에서 내가 구현한 디렉토리 구조**
 ```
@@ -179,7 +195,6 @@
     <a href="https://github.com/Jangilkyu"><img src="https://user-images.githubusercontent.com/69107255/114660602-904eb380-9d30-11eb-9b24-28f58d531a81.jpg" width="75px;" alt="IlkyuJang"/><br /><sub><b>장일규</b></sub></a><br />
     </td>
     <td>
-    <a href="" title="what did I do">💻what did I do</a>
     <br/>
         <a href="https://github.com/noweyhc/foodmall_prj/commits?author=Jangilkyu" title="Code">📜 Commit Log</a>
         <br/>
@@ -188,13 +203,10 @@
 </table>
 
 
-## **🍗4. 프로젝트를 진행하면서 느낀점**
+## **🍗 프로젝트를 진행하면서 느낀점**
 
 ```
-학원에서 만난 동료 개발자들과 처음으로 협업을 해보았습니다. 3주라는 짧은 기간동안 깃,브랜치 낯설었던 협업을 위한 툴에 익숙해지고 버전관리를 하면서 효율적인 코드에 대해서 많이 고민해 보았습니다. 좋은 동료들을 만나서 팀원 분들에게 감사드립니다.
+학원에서 만난 동료 개발자들과 처음으로 협업을 해보았습니다.
+3주라는 짧은 기간동안 깃,브랜치 낯설었던 협업을 위한 툴에 익숙해지고 버전관리를 하면서 효율적인 코드에 대해서 많이 고민해 보았습니다.
+ 좋은 동료들을 만나서 팀원 분들에게 감사드립니다.
 ```
-## 형상관리
-
-![소스트리](https://user-images.githubusercontent.com/69107255/114664028-1c170e80-9d36-11eb-99e4-ad09ca2a7cfb.gif)
-
-<img src ="https://user-images.githubusercontent.com/69107255/113604293-0774af80-9680-11eb-996e-8c825294d125.png">

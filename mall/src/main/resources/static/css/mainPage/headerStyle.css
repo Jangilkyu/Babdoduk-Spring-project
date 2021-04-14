@@ -1,0 +1,46 @@
+
+.body-wrapper {
+    width: 1100px;
+    margin: 0px auto;
+}
+
+.nav-align {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-right {
+	width: 250px;
+	align-content: right;
+}
+
+.header ul {
+    margin-top: 20px;
+    padding-left: 0px;
+}
+
+.header ul li{
+    list-style-type: none; 
+    display: inline;
+    margin-right: 20px;
+}
+
+.header ul a {
+    color: #000;
+    text-decoration: none;
+}
+
+#mypageLink{
+	margin-right: 0px;
+}
+
+.nav-main-image{ 
+    margin: 40px 0 60px 0;
+    text-align: center;
+}
+
+#logo-image {
+	width: 320px;
+	height: auto;
+}

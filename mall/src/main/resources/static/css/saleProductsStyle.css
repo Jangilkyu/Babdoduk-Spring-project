@@ -1,0 +1,93 @@
+
+#saleProducts {
+	position: relative;
+	margin: auto;
+	margin-top: 90px;
+	margin-bottom: 50px;
+	width: 1120px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.sale-list-title{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.sale-wrap {
+	margin-top: 50px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+
+.sale-item-box {
+	width: 260px;
+	height: 380px;
+	margin-top: 40px;
+	margin-bottom: 60px;
+	margin-right: 20px;
+}
+
+.items {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	display: block;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: left;
+}
+
+.items .sale-item-image{
+	width: 260px;
+	height: 290px;
+	object-fit: cover;
+	border-radius: 5%;
+}
+
+.items .sale-title{
+	font-weight: 400;
+	font-size: 18px;
+	margin-top: 10px;
+	color: black;
+}
+
+.items .sale-subtitle{
+	font-weight: 400;
+	margin-top: 5px;
+	color: #667a77;
+}
+
+.items .sale-origin-price{
+	font-weight: 500;
+	margin-top: 5px;
+	font-size: 12px;
+	color: gray;
+	text-decoration: line-through;
+}
+
+.items .sale-price {
+	font-weight: 700;
+	font-size: 18px;
+	color: #ffa62b;
+}
+
+.items .sale-rate {
+	font-weight: 700;
+	font-size: 16px;
+	color: #26A69A;
+	padding-bottom: 2px;
+}
+
+.items a {
+	text-decoration: none;
+	color: black;
+}
+
+
+.items .sale-title a:hover {
+	color: #19778a;
+}

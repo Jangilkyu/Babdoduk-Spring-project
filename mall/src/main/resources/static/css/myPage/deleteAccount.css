@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.delete-wrap {
+    background: none;
+    width: 900px;
+    padding: 30px;
+    border: 1px solid #DFE1E5;
+    border-radius: 5px;	 
+    margin-bottom: 50px;
+}
+
+.del-text {
+    font-weight: bold;
+}
+
+.del-container {
+    background: none;
+    width: 1000px;
+    padding: 30px;
+    border: 1px solid #DFE1E5;
+    border-radius: 5px;	 
+    margin-bottom: 50px;    
+}
+.del-btn {
+ margin-left: 740px;   
+}

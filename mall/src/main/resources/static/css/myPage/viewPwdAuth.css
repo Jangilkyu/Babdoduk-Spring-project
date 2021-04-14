@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+#pwInquiry-container {
+    margin: 300px auto;
+    background: none;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px; 
+}
+.context {
+    text-align: justify;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 8px;
+    letter-spacing: -1px;
+    color: #999;
+}
+
+.pwd-title {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 3px;
+    margin: 10px;
+    color: 332px;
+    text-align: left;
+}
+.pwd-btn {
+    margin-left: 170px;
+}
+
+
+
+.btn-chk {
+    display : inline-block;
+	margin-left: 10px;
+}
+
+
+
+#viewPwdAuth-container {
+    margin: 200px auto;
+    background: none;
+    width: 500px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;     
+}
+
+.send-btn {
+    margin-left: 150px;
+    padding-bottom: 30px;
+}

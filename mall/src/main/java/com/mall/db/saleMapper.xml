@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sale">
+  <select id="register">
+    insert into TB_TIMESALE values(
+    #{product_no},
+    to_date(#{timesale_start}, 'yyyy-mm-dd hh24:mi:ss'),
+    to_date(#{timesale_end}, 'yyyy-mm-dd hh24:mi:ss'),
+    #{timesale_saleprice})
+  </select>
+  
+  <select id="findAll" resultType="saleVo">
+  	select * from TB_TIMESALE
+  </select>
+  
+  <select id="selectOne" resultType="saleVo">
+  	select * from TB_TIMESALE where product_no = #{no}
+  </select>
+  
+  <select id="update">
+  	update TB_TIMESALE 
+  	set timesale_start =  to_date(#{timesale_start}, 'yyyy-mm-dd hh24:mi:ss'), 
+  		timesale_end = to_date(#{timesale_end}, 'yyyy-mm-dd hh24:mi:ss'), 
+  		timesale_saleprice = #{timesale_saleprice} 
+  	where product_no = #{product_no}
+  </select>
+  
+  <select id="delete">
+  	delete from TB_TIMESALE 
+  	where product_no = #{no}
+  </select>
+  
+  <select id="selectValid" resultType="saleVo">
+		select	* from TB_TIMESALE 
+		where	to_date(#{now}, 'yyyy-mm-dd hh24:mi:ss') > timesale_start 
+		and		timesale_end > to_date(#{now}, 'yyyy-mm-dd hh24:mi:ss') 
+	</select>
+  
+</mapper>

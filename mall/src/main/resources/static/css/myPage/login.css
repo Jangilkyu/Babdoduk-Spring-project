@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.login-container {
+    width: 500px;
+    margin: 250px 250px;
+
+}
+
+.login-background {
+    background: none;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;  
+}
+.login-btn {
+    margin-left: 350px;
+}

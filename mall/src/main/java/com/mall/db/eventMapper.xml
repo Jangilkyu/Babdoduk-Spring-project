@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="event">
+  <select id="register">
+    insert into TB_EVENT values(
+    #{event_no}, #{event_title}, #{event_content}, #{event_img},
+    to_date(#{event_start}, 'yyyy-mm-dd hh24:mi:ss'),
+    to_date(#{event_end}, 'yyyy-mm-dd hh24:mi:ss'),
+    0, sysdate, #{event_link})
+  </select>
+  
+  <select id="getNextNo" resultType="int">
+	select event_no
+	from(
+  		SELECT * FROM tb_event 
+  		order by event_regdate desc
+	)
+	where rownum = 1
+  </select>
+  
+  <select id="findAll" resultType="eventVo">
+  	select * from tb_event
+  </select>
+  
+  <select id="selectValid" resultType="eventVo">
+  	select * from tb_event 
+  	where	to_date(#{now}, 'yyyy-mm-dd hh24:mi:ss') > event_start 
+	and		event_end > to_date(#{now}, 'yyyy-mm-dd hh24:mi:ss')
+  </select>
+  
+  <select id="selectOne" resultType="eventVo">
+  	select * from tb_event
+  	where event_no = #{no}
+  </select>
+  
+  <update id="update">
+  	update	TB_EVENT 
+  	set		event_title=#{event_title}, event_content=#{event_content}, event_img=#{event_img},
+  			event_start=to_date(#{event_start}, 'yyyy-mm-dd hh24:mi:ss'), 
+  			event_end=to_date(#{event_end}, 'yyyy-mm-dd hh24:mi:ss'), 
+  			event_link=#{event_link} 
+  	where event_no=#{event_no} 
+  </update>
+  
+  <delete id="delete">
+  	delete from TB_EVENT
+  	where event_no=#{no} 
+  </delete>
+</mapper>

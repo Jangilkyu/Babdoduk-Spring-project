@@ -1,0 +1,95 @@
+
+.footer {
+	width: 100%;
+	padding-top: 0px;
+	font-family: "Nanum Gothic", sans-serif;
+}
+
+.footer-link-bar{
+	background: #b7d9d4;
+	padding: 5px 20px;
+}
+
+.footer-link{
+	background: #b7d9d4;
+	width: 1100px;
+	margin: auto;
+	font-weight: bold;
+}
+
+.footer-link ul{
+	text-align: center;
+	padding-top: 15px;
+	list-style: none;
+}
+
+.footer-link li{
+	display: inline-block;
+	padding: 0 50px;	
+}
+
+.footer-link a{
+	text-decoration: none;
+	color: #456160;
+}
+
+.footer-inner{
+	text-align: center;
+	padding-top: 0px;	
+	padding-bottom: 0px;	
+	width: 1100px;
+	margin: auto;
+}
+
+.footer-col-left{
+	text-align: left;
+	display: inline-block;
+	padding: 20px;
+	padding-right: 150px;
+}
+
+.footer-col-right{
+	text-align: left;
+	display: inline-block;
+	padding: 20px;	
+	padding-left: 150px;
+}
+
+.footer-title{
+	font-size: 20px;
+	padding-bottom: 5px;
+}
+
+.footer--call{
+	font-size: 30px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+.footer--cs{
+	font-size: 14px;
+}
+
+.footer--company{
+	padding-bottom: 4px;
+	font-size: 13px;
+	color: #808080;
+}
+
+.footer-bottom-bar{
+	background: #19778a;
+}
+
+.footer-bottom{
+	background: #19778a;
+	width: 1100px;
+	margin: auto;
+}
+
+.footer--copy{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: center;
+	color: white;
+	font-size: 12px;
+}
