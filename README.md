@@ -4,7 +4,7 @@
 
 > 밥도둑은 현대인을 겨냥한 음식, 특히 반찬 전문 쇼핑몰 이용자와 운영자가 필요한 음식과 반찬을 
 편하게 사고 팔 수 있도록 합니다.
-> 쇼핑몰의 기본적인 기능에 더해 각정 편의기능을 더하고자 했습니다.
+> 쇼핑몰의 기본적인 기능에 더해 각종 편의기능을 더하고자 했습니다.
 
 ## 🛠️ 개발환경
 
@@ -26,7 +26,9 @@
 
 ## 👨‍💻 주요기능
 
-### 🍣 **로그인**
+### **로그인**
+
+![로그인](https://user-images.githubusercontent.com/69107255/114723700-d24e1880-9d75-11eb-84e7-7d66fdad674f.gif)
 
 ### 아이디 찾기
 ![아이디찾기1](https://user-images.githubusercontent.com/69107255/114677976-c5b1cc00-9d45-11eb-82e6-1f7d735da8ba.gif)
@@ -56,13 +58,19 @@
 
 ### 회원 전용 1:1문의
 
-![clientinquiry](https://user-images.githubusercontent.com/69107255/114680342-0579b300-9d48-11eb-8409-a1bd5f60d31b.gif)
+![admininquiry](https://user-images.githubusercontent.com/69107255/114721385-d6793680-9d73-11eb-88bc-312618e8c713.gif)
 
 ### 내가한 문의
 
 ![내가한 문의](https://user-images.githubusercontent.com/69107255/114698800-76c26180-9d5a-11eb-801e-cd02014e64e8.gif)
 
+### 내가 문의한 목록 - Search
+
 ![clientinquiryDetail](https://user-images.githubusercontent.com/69107255/114682063-b59beb80-9d49-11eb-844a-674f222bd56b.gif)
+
+### admin페이지에서 1:1문의 답변 
+
+![admininquiry](https://user-images.githubusercontent.com/69107255/114721385-d6793680-9d73-11eb-88bc-312618e8c713.gif)
 
 ### Interceptor
 
