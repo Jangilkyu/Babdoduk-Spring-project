@@ -58,7 +58,7 @@
 
 ### 회원 전용 1:1문의
 
-![admininquiry](https://user-images.githubusercontent.com/69107255/114721385-d6793680-9d73-11eb-88bc-312618e8c713.gif)
+![clientinquiry](https://user-images.githubusercontent.com/69107255/114725118-332a2080-9d77-11eb-862d-8a36854826ed.gif)
 
 ### 내가한 문의
 
