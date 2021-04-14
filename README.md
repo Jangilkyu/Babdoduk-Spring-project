@@ -1,13 +1,14 @@
 <h1 align="center">🥗다양한 반찬이 필요할 땐?! 밥도둑 🥙</h1>
 
-<img src ="https://user-images.githubusercontent.com/69107255/113665638-c664b580-96e8-11eb-93a2-a49fd3d65c23.png">
+![image](https://user-images.githubusercontent.com/69107255/113665638-c664b580-96e8-11eb-93a2-a49fd3d65c23.png)
 
 > 밥도둑은 현대인을 겨냥한 음식, 특히 반찬 전문 쇼핑몰 이용자와 운영자가 필요한 음식과 반찬을 
 편하게 사고 팔 수 있도록 합니다.
 > 쇼핑몰의 기본적인 기능에 더해 각정 편의기능을 더하고자 했습니다.
 
 ## 🛠️ 개발환경
-<img src ="https://user-images.githubusercontent.com/69107255/114660025-92fcd900-9d2f-11eb-9031-1c26d7cd3917.png">
+
+![setting](https://user-images.githubusercontent.com/69107255/114660025-92fcd900-9d2f-11eb-9031-1c26d7cd3917.png)
 
 ## **🌭 프로젝트 구현 목록**
 - 로그인
@@ -49,7 +50,19 @@
 
 ### 결제 구현
 
-![payment](https://user-images.githubusercontent.com/69107255/114667670-b5e0ba80-9d3a-11eb-9e21-4c7baa893564.gif)
+![PAYMENT1](https://user-images.githubusercontent.com/69107255/114698188-c0f71300-9d59-11eb-9a2e-cb271f055f17.gif)
+
+### 1:1문의
+
+### 회원 전용 1:1문의
+
+![clientinquiry](https://user-images.githubusercontent.com/69107255/114680342-0579b300-9d48-11eb-8409-a1bd5f60d31b.gif)
+
+### 내가한 문의
+
+![내가한 문의](https://user-images.githubusercontent.com/69107255/114698800-76c26180-9d5a-11eb-801e-cd02014e64e8.gif)
+
+![clientinquiryDetail](https://user-images.githubusercontent.com/69107255/114682063-b59beb80-9d49-11eb-844a-674f222bd56b.gif)
 
 ### Interceptor
 
