@@ -21,14 +21,39 @@
     - 회원 탈퇴
 - 1:1 문의 게시판
 - 결제 구현 
-- 인터셉터
+- Interceptor
+
+## 👨‍💻 주요기능
+
+### 🍣 **로그인**
+
+### 아이디 찾기
+![아이디찾기1](https://user-images.githubusercontent.com/69107255/114677976-c5b1cc00-9d45-11eb-82e6-1f7d735da8ba.gif)
+
+### 비밀번호 찾기
+
+### 🍟 **마이페이지**
+
+### 핸드폰번호 변경
+
+![핸드폰번호 변경](https://user-images.githubusercontent.com/69107255/114670417-ec6c0480-9d3d-11eb-8ac6-fa89b7341f83.gif)
+
+### 배송지관리 - 주소 변경
+
+![주소변경](https://user-images.githubusercontent.com/69107255/114678140-f1cd4d00-9d45-11eb-9545-d3fe4fc0c25b.gif)
 
 
+### 이메일 주소 변경
 
+![이메일 변경](https://user-images.githubusercontent.com/69107255/114673236-ef1c2900-9d40-11eb-933b-44269ecb4da4.gif)
+
+### 결제 구현
+
+![payment](https://user-images.githubusercontent.com/69107255/114667670-b5e0ba80-9d3a-11eb-9e21-4c7baa893564.gif)
 
 ### Interceptor
-![Interceptor](https://user-images.githubusercontent.com/69107255/114666020-b415f780-9d38-11eb-9a67-519c0a92c063.gif)
 
+![Interceptor1](https://user-images.githubusercontent.com/69107255/114666483-4918f080-9d39-11eb-9a71-7200d4cb4a12.gif)
 
 ## **🍕 프로젝트에서 내가 구현한 디렉토리 구조**
 ```
